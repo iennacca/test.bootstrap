@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+
+
+    <!-- Ignite UI Required Combined CSS Files -->
+    <link href="css/themes/infragistics/infragistics.theme.css" rel="stylesheet" />
+    <link href="css/structure/infragistics.css" rel="stylesheet" />
+
+    <style>
+        #gridChartContainer > * {
+            max-width: 700px;
+            margin-top: 20px;
+        }
+    </style>
+
+    <!-- JavaScript Library Dependencies -->
+    <script src="http://modernizr.com/downloads/modernizr-latest.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+
+    <!-- Ignite UI Required Combined JavaScript Files -->
+    <script src="js/infragistics.core.js"></script>
+    <script src="js/infragistics.dv.js"></script>
+    <script src="js/infragistics.lob.js"></script>
+
+</head>
+
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li class="active"><a href="igniteui.html">IgniteUI</a></li>
+                <li><a href="theme.html">Bootstrap Theme</a></li>
+                <li><a href="dashboard.html">Bootstrap Dashboard</a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
+    </div>
+</div>
+
+<div class="container">
+    <div id="gridChartContainer">
+        <table id="grid"></table>
+        <div id="chart"></div>
+    </div>
+</div>
+
+<script>
+
+    $(function () {
+
+        // Data
+        var populationData = [
+            { "CountryName": "China", "1995": 1216, "2005": 1297, "2015": 1361, "2025": 1394 },
+            { "CountryName": "India", "1995": 920, "2005": 1090, "2015": 1251, "2025": 1396 },
+            { "CountryName": "United States", "1995": 266, "2005": 295, "2015": 322, "2025": 351 },
+            { "CountryName": "Indonesia", "1995": 197, "2005": 229, "2015": 256, "2025": 277 },
+            { "CountryName": "Brazil", "1995": 161, "2005": 186, "2015": 204, "2025": 218 },
+            { "CountryName": "Elbonia", "1995": 161, "2005": 186, "2015": 204, "2025": 218 }
+        ];
+
+        // Grid
+        $("#grid").igGrid({
+            width: "100%",
+            dataSource: populationData,
+            autoGenerateColumns: false,
+            columns: [{
+                key: "CountryName",
+                headerText: "Country",
+                width: "33.33%"
+            }, {
+                key: "2005",
+                headerText: "2005",
+                width: "33.33%"
+            }, {
+                key: "2015",
+                headerText: "2015",
+                width: "33.33%"
+            }],
+            features: [{
+                name: "Sorting",
+                columnSettings: [{
+                    columnKey: "2015",
+                    currentSortDirection: "descending"
+                }]
+            }]
+        });
+
+        // Data Chart
+        $("#chart").igDataChart({
+            width: "100%",
+            height: "300px",
+            title: "Population per Country",
+            subtitle: "Five largest projected populations for 2015",
+            dataSource: populationData,
+            axes: [{
+                name: "NameAxis",
+                type: "categoryX",
+                title: "Country",
+                label: "CountryName"
+            }, {
+                name: "PopulationAxis",
+                type: "numericY",
+                minimumValue: 0,
+                title: "Projected Population (Millions of People)"
+            }],
+            series: [{
+                name: "2015Population",
+                type: "column",
+                xAxis: "NameAxis",
+                yAxis: "PopulationAxis",
+                valueMemberPath: "2015"
+            }]
+        });
+
+    });
+
+</script>
+
+</body>
+</html>
