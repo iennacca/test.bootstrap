@@ -5,16 +5,21 @@
 /// <reference path="../js/jquery.d.ts" />
 
 module CDO {
-    export class CDOData {
-        Id:number;
-        Name:string;
+    export interface CDODataSet {
+        id: number;
+        Name: string;
+        uid: string;
     }
 
     export interface AsyncDataSource {
-        GetDataAsync(): JQueryPromise<CDOData>;
+        GetDataAsync(): JQueryPromise<CDODataSet[]>;
     }
 
     export interface AsyncDataTransform {
-        TransformDataAsync(data:CDOData): JQueryPromise<CDOData>;
+        TransformDataAsync(data: CDODataSet[]): JQueryPromise<CDODataSet[]>;
+    }
+
+    export interface AsyncDataDisplay {
+        DisplayDataAsync(data: CDODataSet[]): JQueryPromise<CDODataSet[]>;
     }
 }

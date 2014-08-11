@@ -5,17 +5,21 @@
 /// <reference path="infrastructure.ts" />
 /// <reference path="fakedata.ts" />
 /// <reference path="faketransform.ts" />
+/// <reference path="fakedisplay.ts" />
 
 module CDO {
     export function Visualizer() {
-        var process:JQueryDeferred<CDO.CDOData> = $.Deferred();
+        var process:JQueryDeferred<CDO.CDODataSet[]> = $.Deferred();
 
         process
             .then(function () {
-                return new DP().GetDataAsync();
+                return new FakeDataSetSource().GetDataAsync();
             })
-            .then(function (d) {
-                return new TP().TransformDataAsync(d);
+            .then(function (data) {
+                return new FakeDataTransform().TransformDataAsync(data);
+            })
+            .then(function (data) {
+                return new FakeDataDisplay().DisplayDataAsync(data);
             })
             .done(function () {
                 $('#done').html('Done.');

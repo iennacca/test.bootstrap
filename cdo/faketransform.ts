@@ -5,14 +5,15 @@
 /// <reference path="infrastructure.ts" />
 
 module CDO {
-    export class TP implements AsyncDataTransform {
-        TransformDataAsync(tData:CDOData):JQueryPromise<CDOData> {
+    export class FakeDataTransform implements AsyncDataTransform {
+        TransformDataAsync(data: CDODataSet[]): JQueryPromise<CDODataSet[]> {
             var d = $.Deferred();
 
             setTimeout(function () {
-                tData.Name = tData.Name + ' Chaves';
-                $('#result2').html(tData.Name);
-                d.resolve(tData);
+                for (var i: number = 0; i < data.length; i++) {
+                    data[i].Name = data[i].Name + ' Chaves';
+                }
+                d.resolve(data);
             }, 2000);
             return d.promise();
         }

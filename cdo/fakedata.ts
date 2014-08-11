@@ -5,16 +5,29 @@
 /// <reference path="infrastructure.ts" />
 
 module CDO {
-    export class DP implements AsyncDataSource {
-        GetDataAsync():JQueryPromise<CDOData> {
+    class FakeDataSet implements CDODataSet {
+        id: number;
+        Name: string;
+        uid: string;
+    }
+
+    export class FakeDataSetSource implements AsyncDataSource {
+        GetDataAsync(): JQueryPromise<CDODataSet[]> {
             var d = $.Deferred();
+            var l = [];
 
             setTimeout(function () {
-                var dpData = new CDOData();
-                dpData.Id = 1;
+                var dpData = new FakeDataSet();
+                dpData.id = 1;
                 dpData.Name = 'Jerry';
-                $('#result1').html(dpData.Name);
-                d.resolve(dpData);
+                l.push(dpData);
+
+                var dpData1 = new FakeDataSet();
+                dpData1.id = 2;
+                dpData1.Name = 'Karen';
+                l.push(dpData1);
+
+                d.resolve(l);
             }, 2000);
             return d.promise();
         }

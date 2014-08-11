@@ -7,7 +7,7 @@
     <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 </head>
 <body>
-
+    <ul id="list"></ul>
     <script>
         $(function() {
             alert("This is a test.");
@@ -17,9 +17,11 @@
                 headers: { "token": "TZLkSchIioQEPMWNWcuakCCLUbvJaUhk" }
             })
             .done(function(data) {
-                console.log(data);
+                for (i = 0; i < data.metadata.resultset.count; i++) {
+                    $('#list').append('<li>' + data.results[i].id + ' ' + data.results[i].name + '</li>');
+                }
             })
-            .fail(function(jqXHR, textStatus, errorThrown) {
+            .fail(function(jqXHR, textStatus) {
                 alert(textStatus);
             });
         });
