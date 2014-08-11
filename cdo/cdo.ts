@@ -12,10 +12,10 @@ module CDO {
 
         process
             .then(function () {
-                return new CDO.DP().GetDataAsync();
+                return new DP().GetDataAsync();
             })
-            .then(function (d1) {
-                return new CDO.TP().TransformDataAsync(d1);
+            .then(function (d) {
+                return new TP().TransformDataAsync(d);
             })
             .done(function () {
                 $('#done').html('Done.');
