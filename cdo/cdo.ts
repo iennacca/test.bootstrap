@@ -5,7 +5,7 @@
 /// <reference path="infrastructure.ts" />
 /// <reference path="fakedata.ts" />
 /// <reference path="faketransform.ts" />
-/// <reference path="fakedisplay.ts" />
+/// <reference path="fakedatadisplay.ts" />
 
 module CDO {
     export function Visualizer() {
