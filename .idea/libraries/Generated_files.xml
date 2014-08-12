@@ -12,10 +12,10 @@
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/cdo/fakedata.js" />
-      <root url="file://$PROJECT_DIR$/cdo/fakedatadisplay.js" />
+      <root url="file://$PROJECT_DIR$/cdo/fakedisplay.js" />
       <root url="file://$PROJECT_DIR$/cdo/infrastructure.js" />
       <root url="file://$PROJECT_DIR$/cdo/faketransform.js" />
-      <root url="file://$PROJECT_DIR$/cdo/fakedatadisplay.js" />
+      <root url="file://$PROJECT_DIR$/cdo/fakedisplay.js" />
       <root url="file://$PROJECT_DIR$/cdo/cdo.js" />
     </CLASSES>
     <SOURCES />
