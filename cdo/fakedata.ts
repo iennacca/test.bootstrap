@@ -12,7 +12,7 @@ module CDO {
     }
 
     export class FakeDataSetSource implements AsyncDataSource {
-        GetDataAsync(): JQueryPromise<CDODataSet[]> {
+        GetDataAsync(): JQueryPromise<any> {
             var d = $.Deferred();
             var l = [];
 

@@ -9,7 +9,7 @@
 
 module CDO {
     export function Visualizer() {
-        var process:JQueryDeferred<CDO.CDODataSet[]> = $.Deferred();
+        var process:JQueryDeferred<any> = $.Deferred();
 
         process
             .then(function () {

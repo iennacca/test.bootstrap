@@ -12,11 +12,11 @@ module CDO {
     }
 
     export interface AsyncDataSource {
-        GetDataAsync(): JQueryPromise<CDODataSet[]>;
+        GetDataAsync(): JQueryPromise<any>;
     }
 
     export interface AsyncDataTransform {
-        TransformDataAsync(data: CDODataSet[]): JQueryPromise<CDODataSet[]>;
+        TransformDataAsync(data: any): JQueryPromise<CDODataSet[]>;
     }
 
     export interface AsyncDataDisplay {
