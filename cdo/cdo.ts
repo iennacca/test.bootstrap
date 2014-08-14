@@ -2,29 +2,32 @@
  * Created by jchaves on 8/9/14.
  */
 
-/// <reference path="infrastructure.ts" />
-/// <reference path="fakedata.ts" />
-/// <reference path="faketransform.ts" />
-/// <reference path="fakedisplay.ts" />
+/// <reference path='../js/tsdefinitions/require.d.ts' />
 
-module CDO {
-    export function Visualizer() {
-        var process:JQueryDeferred<any> = $.Deferred();
+import CDOData = require('./fakedata');
+import CDOTransform = require('./faketransform');
+import CDODisplay = require('./fakedisplay');
 
-        process
-            .then(function () {
-                return new FakeDataSetSource().GetDataAsync();
-            })
-            .then(function (data) {
-                return new FakeDataTransform().TransformDataAsync(data);
-            })
-            .then(function (data) {
-                return new FakeDataDisplay().DisplayDataAsync(data);
-            })
-            .done(function () {
-                $('#done').html('Done.');
-            });
+export function Visualizer() {
+    var process:JQueryDeferred<any> = $.Deferred();
 
-        process.resolve();
-    }
+    process
+        .then(function () {
+            return new CDOData.FakeDataSetSource().GetDataAsync();
+        })
+        .then(function (data) {
+            return new CDOTransform.FakeDataTransform().TransformDataAsync(data);
+        })
+        .then(function (data) {
+            return new CDODisplay.FakeDataDisplay().DisplayDataAsync(data);
+        })
+        .done(function () {
+            $('#done').html('Done.');
+        });
+
+    process.resolve();
 }
+
+require([], () => {
+    Visualizer();
+});
