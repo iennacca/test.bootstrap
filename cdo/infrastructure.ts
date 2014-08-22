@@ -4,10 +4,10 @@
 
 /// <reference path="../js/tsdefinitions/jquery.d.ts" />
 
-export interface CDODataSet {
-    id: number;
+export interface CDODataSetInfo {
+    Id: number;
     Name: string;
-    uid: string;
+    UID: string;
 }
 
 export interface AsyncDataSource {
@@ -15,9 +15,9 @@ export interface AsyncDataSource {
 }
 
 export interface AsyncDataTransform {
-    TransformDataAsync(data: any): JQueryPromise<CDODataSet[]>;
+    TransformDataAsync(data: any): JQueryPromise<CDODataSetInfo[]>;
 }
 
 export interface AsyncDataDisplay {
-    DisplayDataAsync(data: CDODataSet[]): JQueryPromise<CDODataSet[]>;
+    DisplayDataAsync(data: CDODataSetInfo[]): JQueryPromise<CDODataSetInfo[]>;
 }

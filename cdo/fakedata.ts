@@ -4,29 +4,26 @@
 
 import CDO = require('./infrastructure');
 
-class FakeDataSet implements CDO.CDODataSet {
-    id: number;
+class FakeDataSetInfo implements CDO.CDODataSetInfo {
+    Id: number;
     Name: string;
-    uid: string;
+    UID: string;
 }
 
 export class FakeDataSetSource implements CDO.AsyncDataSource {
     GetDataAsync(): JQueryPromise<any> {
         var d = $.Deferred();
-        var l = [];
+        var names = ['Jerry', 'Karen', 'Cameron'];
+        var data = [];
 
         setTimeout(function () {
-            var dpData = new FakeDataSet();
-            dpData.id = 1;
-            dpData.Name = 'Jerry';
-            l.push(dpData);
-
-            var dpData1 = new FakeDataSet();
-            dpData1.id = 2;
-            dpData1.Name = 'Karen';
-            l.push(dpData1);
-
-            d.resolve(l);
+            for (var i = 0; i < names.length; i++) {
+                var dpData = new FakeDataSetInfo();
+                dpData.Id = i;
+                dpData.Name = names[i];
+                data.push(dpData);
+            }
+            d.resolve(data);
         }, 2000);
         return d.promise();
     }

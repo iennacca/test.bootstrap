@@ -5,7 +5,7 @@
 import CDO = require('./infrastructure');
 
 export class FakeDataTransform implements CDO.AsyncDataTransform {
-    TransformDataAsync(data: CDO.CDODataSet[]): JQueryPromise<CDO.CDODataSet[]> {
+    TransformDataAsync(data: any): JQueryPromise<CDO.CDODataSetInfo[]> {
         var d = $.Deferred();
 
         setTimeout(function () {
