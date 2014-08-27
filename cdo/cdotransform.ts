@@ -21,7 +21,7 @@ export class CDODataSetInfoTransform implements CDO.AsyncDataTransform {
                 var dataset = new DataSetInfo();
 
                 dataset.Id = data.results[i].id;
-                dataset.Name = '[' + data.results[i].name + ' ]';
+                dataset.Name = '[' + data.results[i].name + ']';
                 dataset.UID = data.results[i].uid;
                 dataSets.push(dataset);
             }

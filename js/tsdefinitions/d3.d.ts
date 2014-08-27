@@ -419,7 +419,7 @@ declare module D3 {
          */
         interpolators: Array<Transition.InterpolateFactory>;
         /**
-         * Layouts
+         * layouts
          */
         layout: Layout.Layout;
         /**

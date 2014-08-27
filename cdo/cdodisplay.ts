@@ -11,20 +11,27 @@ export class CDODataSetInfoDisplay implements CDO.AsyncDataDisplay {
         var process = $.Deferred();
         var displayWords = data.map(function(d) { return d.Name; });
 
-        this.displayData(displayWords);
+        setTimeout(function() {
+            var displayer = new DisplayModule();
+
+            displayer.displayData(displayWords);
+            process.resolve();
+        }, 0);
 
         return process.promise();
     }
+}
 
+class DisplayModule {
     displayData(data: string[]) {
         var fill = d3.scale.category20();
 
         d3.layout.cloud().size([300, 300])
             .words(data.map(function(d) {
-                    return {text: d, size: 10 + Math.random() * 90};
-                }))
+                return {text: d, size: 10};
+            }))
             .padding(5)
-            .rotate(function() { return ~~(Math.random() * 2) * 90; })
+            .rotate(0)
             .font("Impact")
             .fontSize(function(d) { return d.size; })
             .on("end", draw)
