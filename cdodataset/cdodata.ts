@@ -2,8 +2,8 @@
  * Created by jchaves on 8/12/14.
  */
 
-/// <reference path="infrastructure.ts" />
-import CDO = require('infrastructure');
+/// <reference path="../common/infrastructure.ts" />
+import CDO = require('../common/infrastructure');
 
 export class CDODataSetInfoSource implements CDO.AsyncDataSource {
     GetDataAsync(): JQueryPromise<any> {

@@ -2,7 +2,7 @@
  * Created by jchaves on 8/9/14.
  */
 
-import CDO = require('./infrastructure');
+import CDO = require('./../common/infrastructure');
 
 export class FakeDataTransform implements CDO.AsyncDataTransform {
     TransformDataAsync(data: any): JQueryPromise<CDO.CDODataSetInfo[]> {

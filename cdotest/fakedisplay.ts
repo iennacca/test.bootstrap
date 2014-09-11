@@ -2,7 +2,7 @@
  * Created by jchaves on 8/11/14.
  */
 
-import CDO = require('./infrastructure');
+import CDO = require('./../common/infrastructure');
 
 export class FakeDataDisplay implements CDO.AsyncDataDisplay {
     DisplayDataAsync(data: CDO.CDODataSetInfo[]): JQueryPromise<CDO.CDODataSetInfo[]> {

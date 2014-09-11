@@ -4,7 +4,7 @@
 
 /// <reference path='../js/tsdefinitions/d3.d.ts' />
 /// <reference path='../js/tsdefinitions/d3.layout.cloud.d.ts' />
-import CDO = require('./infrastructure');
+import CDO = require('../common/infrastructure');
 
 export class CDODataSetInfoDisplay implements CDO.AsyncDataDisplay {
     DisplayDataAsync(data: CDO.CDODataSetInfo[]): JQueryPromise<CDO.CDODataSetInfo[]> {

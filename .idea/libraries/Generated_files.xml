@@ -2,6 +2,7 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/cdo/cdolocdata.js" />
         <item url="file://$PROJECT_DIR$/cdo/cdodata.js" />
         <item url="file://$PROJECT_DIR$/cdo/fakedata.js" />
         <item url="file://$PROJECT_DIR$/cdo/cdodisplay.js" />
@@ -14,15 +15,16 @@
       </sourceFilesUrls>
     </properties>
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/cdo/cdodata.js" />
-      <root url="file://$PROJECT_DIR$/cdo/fakedata.js" />
-      <root url="file://$PROJECT_DIR$/cdo/cdodisplay.js" />
-      <root url="file://$PROJECT_DIR$/cdo/cdotransform.js" />
-      <root url="file://$PROJECT_DIR$/cdo/infrastructure.js" />
-      <root url="file://$PROJECT_DIR$/cdo/faketransform.js" />
-      <root url="file://$PROJECT_DIR$/cdo/fakedisplay.js" />
-      <root url="file://$PROJECT_DIR$/cdo/fakecdo.js" />
-      <root url="file://$PROJECT_DIR$/cdo/cdo.js" />
+      <root url="file://$PROJECT_DIR$/cdostation/cdolocdata.js" />
+      <root url="file://$PROJECT_DIR$/cdodataset/cdodata.js" />
+      <root url="file://$PROJECT_DIR$/cdotest/fakedata.js" />
+      <root url="file://$PROJECT_DIR$/cdodataset/cdodisplay.js" />
+      <root url="file://$PROJECT_DIR$/cdodataset/cdotransform.js" />
+      <root url="file://$PROJECT_DIR$/common/infrastructure.js" />
+      <root url="file://$PROJECT_DIR$/cdotest/faketransform.js" />
+      <root url="file://$PROJECT_DIR$/cdotest/fakedisplay.js" />
+      <root url="file://$PROJECT_DIR$/common/fakecdo.js" />
+      <root url="file://$PROJECT_DIR$/common/cdo.js" />
     </CLASSES>
     <SOURCES />
   </library>

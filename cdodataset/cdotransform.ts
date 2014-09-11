@@ -2,7 +2,7 @@
  * Created by jchaves on 8/15/14.
  */
 
-import CDO = require('./infrastructure');
+import CDO = require('../common/infrastructure');
 
 
 class DataSetInfo implements CDO.CDODataSetInfo {
