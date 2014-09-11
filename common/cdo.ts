@@ -8,18 +8,22 @@ import CDOData = require('../cdodataset/cdodata');
 import CDOTransform = require('../cdodataset/cdotransform');
 import CDODisplay = require('../cdodataset/cdodisplay');
 
+//import CDOData = require('../cdotest/fakedata');
+//import CDOTransform = require('../cdotest/faketransform');
+//import CDODisplay = require('../cdotest/fakedisplay');
+
 export function Visualizer() {
     var process:JQueryDeferred<any> = $.Deferred();
 
     process
         .then(function () {
-            return new CDOData.CDODataSetInfoSource().GetDataAsync();
+            return new CDOData.Source().GetDataAsync();
         })
         .then(function (data) {
-            return new CDOTransform.CDODataSetInfoTransform().TransformDataAsync(data);
+            return new CDOTransform.Transform().TransformDataAsync(data);
         })
         .then(function (data) {
-            return new CDODisplay.CDODataSetInfoDisplay().DisplayDataAsync(data);
+            return new CDODisplay.Display().DisplayDataAsync(data);
         })
         .done(function () {
             $('#done').html('Done.');

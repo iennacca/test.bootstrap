@@ -6,7 +6,7 @@
 /// <reference path='../js/tsdefinitions/d3.layout.cloud.d.ts' />
 import CDO = require('../common/infrastructure');
 
-export class CDODataSetInfoDisplay implements CDO.AsyncDataDisplay {
+export class Display implements CDO.AsyncDataDisplay {
     DisplayDataAsync(data: CDO.CDODataSetInfo[]): JQueryPromise<CDO.CDODataSetInfo[]> {
         var process = $.Deferred();
         var displayWords = data.map(function(d) { return d.Name; });

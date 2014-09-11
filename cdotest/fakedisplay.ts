@@ -4,7 +4,7 @@
 
 import CDO = require('./../common/infrastructure');
 
-export class FakeDataDisplay implements CDO.AsyncDataDisplay {
+export class Display implements CDO.AsyncDataDisplay {
     DisplayDataAsync(data: CDO.CDODataSetInfo[]): JQueryPromise<CDO.CDODataSetInfo[]> {
         var d = $.Deferred();
 

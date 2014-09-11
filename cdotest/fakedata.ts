@@ -10,7 +10,7 @@ class FakeDataSetInfo implements CDO.CDODataSetInfo {
     UID: string;
 }
 
-export class FakeDataSetSource implements CDO.AsyncDataSource {
+export class Source implements CDO.AsyncDataSource {
     GetDataAsync(): JQueryPromise<any> {
         var d = $.Deferred();
         var names = ['Jerry', 'Karen', 'Cameron'];

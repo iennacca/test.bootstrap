@@ -11,7 +11,7 @@ class DataSetInfo implements CDO.CDODataSetInfo {
     UID: string;
 }
 
-export class CDODataSetInfoTransform implements CDO.AsyncDataTransform {
+export class Transform implements CDO.AsyncDataTransform {
     TransformDataAsync(data: any): JQueryPromise<CDO.CDODataSetInfo[]> {
         var d = $.Deferred();
         var dataSets = [];

@@ -4,7 +4,7 @@
 
 import CDO = require('./../common/infrastructure');
 
-export class FakeDataTransform implements CDO.AsyncDataTransform {
+export class Transform implements CDO.AsyncDataTransform {
     TransformDataAsync(data: any): JQueryPromise<CDO.CDODataSetInfo[]> {
         var d = $.Deferred();
 
