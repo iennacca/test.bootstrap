@@ -2,10 +2,9 @@
  * Created by jchaves on 9/9/14.
  */
 
-/// <reference path="../common/infrastructure.ts" />
-import CDO = require('../common/infrastructure');
+import CDO = require('infrastructure');
 
-export class CDOStationSource implements CDO.AsyncDataSource {
+export class Source implements CDO.AsyncDataSource {
     GetDataAsync(): JQueryPromise<any> {
         return $.ajax({
             type: "GET",
@@ -14,3 +13,4 @@ export class CDOStationSource implements CDO.AsyncDataSource {
         });
     }
 }
+

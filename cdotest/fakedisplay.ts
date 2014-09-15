@@ -2,7 +2,7 @@
  * Created by jchaves on 8/11/14.
  */
 
-import CDO = require('./../common/infrastructure');
+import CDO = require('./../cdodataset/infrastructure');
 
 export class Display implements CDO.AsyncDataDisplay {
     DisplayDataAsync(data: CDO.CDODataSetInfo[]): JQueryPromise<CDO.CDODataSetInfo[]> {

@@ -2,7 +2,7 @@
  * Created by jchaves on 8/9/14.
  */
 
-import CDO = require('./../common/infrastructure');
+import CDO = require('./../cdodataset/infrastructure');
 
 export class Transform implements CDO.AsyncDataTransform {
     TransformDataAsync(data: any): JQueryPromise<CDO.CDODataSetInfo[]> {

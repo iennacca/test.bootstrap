@@ -4,9 +4,13 @@
 
 /// <reference path='../js/tsdefinitions/require.d.ts' />
 
-import CDOData = require('../cdodataset/cdodata');
-import CDOTransform = require('../cdodataset/cdotransform');
-import CDODisplay = require('../cdodataset/cdodisplay');
+import CDOData = require('../cdostation/cdostndata');
+import CDOTransform = require('../cdostation/cdostntransform');
+import CDODisplay = require('../cdostation/cdostndisplay');
+
+//import CDOData = require('../cdodataset/cdodata');
+//import CDOTransform = require('../cdodataset/cdotransform');
+//import CDODisplay = require('../cdodataset/cdodisplay');
 
 //import CDOData = require('../cdotest/fakedata');
 //import CDOTransform = require('../cdotest/faketransform');

@@ -1,5 +1,5 @@
 /**
- * Created by jchaves on 8/17/14.
+ * Created by jchaves on 9/14/14.
  */
 
 /// <reference path='../js/tsdefinitions/d3.d.ts' />
@@ -7,7 +7,7 @@
 import CDO = require('infrastructure');
 
 export class Display implements CDO.AsyncDataDisplay {
-    DisplayDataAsync(data: CDO.CDODataSetInfo[]): JQueryPromise<CDO.CDODataSetInfo[]> {
+    DisplayDataAsync(data: CDO.CDOStationInfo[]): JQueryPromise<CDO.CDOStationInfo[]> {
         var process = $.Deferred();
         var displayWords = data.map(function(d) { return d.Name; });
 
