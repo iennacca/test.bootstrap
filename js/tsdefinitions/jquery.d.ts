@@ -1852,7 +1852,7 @@ interface JQuery {
     /**
      * Return the value at the named data store for the first element in the jQuery collection, as set by data(name, value) or by an HTML5 data-* attribute.
      *
-     * @param key Name of the data stored.
+     * @param key Location of the data stored.
      */
     data(key: string): any;
     /**

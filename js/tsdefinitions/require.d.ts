@@ -295,7 +295,7 @@ interface Require {
 interface RequireDefine {
 
     /**
-     * Define Simple Name/Value Pairs
+     * Define Simple Location/Value Pairs
      * @param config Dictionary of Named/Value pairs for the config.
      **/
     (config: { [key: string]: any; }): void;

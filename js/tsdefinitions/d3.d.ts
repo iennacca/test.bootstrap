@@ -579,13 +579,13 @@ declare module D3 {
             /**
              * Get the value of specified request header
              *
-             * @param name Name of header to get the value for
+             * @param name Location of header to get the value for
              */
             (name: string): string;
             /**
              * Set the value of specified request header
              *
-             * @param name Name of header to set the value for
+             * @param name Location of header to set the value for
              * @param value Value to set the header to
              */
             (name: string, value: string): Xhr;
