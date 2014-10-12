@@ -10,7 +10,7 @@ export class Transform implements CDO.AsyncDataTransform {
 
         setTimeout(function () {
             for (var i: number = 0; i < data.length; i++) {
-                data[i].Name = data[i].Name + ' Chaves';
+                data[i].Name = data[i].Location + ' Chaves';
             }
             d.resolve(data);
         }, 2000);

@@ -6,7 +6,7 @@
 
 export interface CDOStationInfo {
     Id: number;
-    Name: string;
+    Location: string;
     Latitude: number;
     Longitude: number;
 }

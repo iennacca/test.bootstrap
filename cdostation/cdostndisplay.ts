@@ -9,7 +9,7 @@ import CDO = require('infrastructure');
 export class Display implements CDO.AsyncDataDisplay {
     DisplayDataAsync(data: CDO.CDOStationInfo[]): JQueryPromise<CDO.CDOStationInfo[]> {
         var process = $.Deferred();
-        var displayWords = data.map(function(d) { return d.Name; });
+        var displayWords = data.map(function(d) { return d.Location; });
 
         setTimeout(function() {
             var displayer = new DisplayModule();
