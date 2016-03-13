@@ -1,0 +1,29 @@
+{
+  "nodes":[
+    {"name":"Jerry","group":1},
+    {"name":"Kris","group":1},
+    {"name":"Connie","group":1},
+    {"name":"Bibby","group":2},
+    {"name":"Cassie","group":2},
+    {"name":"India","group":3},
+    {"name":"Tess","group":3},
+    {"name":"Neil","group":3},
+    {"name":"Leah","group":3},
+    {"name":"Jimmy","group":4},
+    {"name":"Lindy","group":4},
+    {"name":"Carson","group":4}
+  ],
+  "links":[
+    {"source":0,"target":1,"value":10,"rel":"wife"},
+    {"source":0,"target":2,"value":10,"rel":"daughter"},
+    {"source":0,"target":3,"value":1,"rel":"friend"},
+    {"source":3,"target":4,"value":10,"rel":"wife"},
+    {"source":0,"target":5,"value":1,"rel":"friend"},
+    {"source":5,"target":6,"value":10,"rel":"wife"},
+    {"source":5,"target":7,"value":10,"rel":"son"},
+    {"source":5,"target":8,"value":10,"rel":"daughter"},
+    {"source":0,"target":9,"value":1,"rel":"friend"},
+    {"source":9,"target":10,"value":10,"rel":"wife"},
+    {"source":9,"target":11,"value":10,"rel":"son"}
+  ]
+}
