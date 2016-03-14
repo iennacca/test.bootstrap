@@ -64,6 +64,9 @@ d3.json("js/fdg.json", function(error, json) {
         .attr("dy", ".35em")
         .text(function(d) { return d.name });
 
+    node[0].x = width / 2;
+    node[0].y = height / 2;
+
     force.on("tick", function() {
         link.attr("x1", function(d) { return d.source.x; })
             .attr("y1", function(d) { return d.source.y; })
